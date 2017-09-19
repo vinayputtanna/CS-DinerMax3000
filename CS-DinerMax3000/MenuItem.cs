@@ -6,41 +6,46 @@ using System.Threading.Tasks;
 
 namespace CS_DinerMax3000
 {
-    class MenuItem
+    public class MenuItem
     {
         private string title;
         private string description;
         private double price;
 
-        public string GetTitle()
+        public string Title
         {
-            return title;
+            get
+            {
+                return title;
+            }
+            set
+            {
+                title = value;
+            }
         }
-
-        public void SetTitle(string title)
+        
+        public string Description
         {
-            this.title = title;
+            get
+            {
+                return description;
+            }
+            set
+            {
+                description = value;
+            }
         }
-
-        public string GetDescription()
+        
+        public double Price
         {
-            return description;
+            get
+            {
+                return price;
+            }
+            set
+            {
+                price = value;
+            }
         }
-
-        public void SetDescription(string description)
-        {
-            this.description = description;
-        }
-
-        public double GetPrice()
-        {
-            return price;
-        }
-
-        public void SetPrice(double price)
-        {
-            this.price = price;
-        }
-
     }
 }

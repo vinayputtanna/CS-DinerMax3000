@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CS_DinerMax3000
 {
-    class Menu
+    public class Menu
     {
         private string name;
         private List<MenuItem> menuItems;
@@ -16,24 +16,28 @@ namespace CS_DinerMax3000
             menuItems = new List<MenuItem>();
         }
 
-        public String GetName()
+        public String Name
         {
-            return name;
+            get
+            {
+                return name;
+            }
+            set
+            {
+                name = value;
+            }
         }
 
-        public void SetName(string name)
+        public List<MenuItem> MenuItems
         {
-            this.name = name;
-        }
-
-        public List<MenuItem> GetMenuItems()
-        {
-            return menuItems;
-        }
-
-        public void SetMenuItems(List<MenuItem> menuItems)
-        {
-            this.menuItems = menuItems;
+            get
+            {
+                return menuItems;
+            }
+            set
+            {
+                menuItems = value;
+            }
         }
 
         public void AddMenuItem(string title, string description, double price)
